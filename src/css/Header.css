@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+}
+
+.header{
+  top:0;
+  left: 0;
+  right: 0;
+  position:fixed;
+  display: grid;
+  align-content: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px , rgba(0, 0, 0, 0.05) 0px 1px 4px 0px , rgba(0, 0, 0, 0.05) 0px 2px 8px 0px;
+  background-color: rgb(248,249,249);
+  z-index: 9;
+}
+.userlogin{
+  color: black;
+}
+
+.userlogin:hover{
+  opacity: 0.8;
+}
+
+.list-unstyled{
+  transform: translateX(-100px);
+}
+.logo{
+  width: 110px;
+  border-radius: 60px;
+  margin-right: 5px;
+  height: 50px;
+}
+.head{
+  display: flex;
+  border-top: 3px solid rgb(251, 115, 4);
+}
+#contact{
+  background-color: rgba(10, 149, 255, 1);
+  align-self: center;
+}
+#contact:hover{
+  opacity: 0.7;
+}

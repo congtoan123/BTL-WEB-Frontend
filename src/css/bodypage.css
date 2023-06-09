@@ -1,0 +1,334 @@
+.body_wrapper {
+  margin-top: 150px;
+  width: 100%;
+  padding-bottom: 20px;
+  min-height: 600px;
+}
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.table {
+  left: 170px;
+  top: 200px;
+  table-layout: fixed;
+}
+.btn-add {
+  transform: translate(1130%, 0%);
+}
+.modal.loading .modal-content:before {
+  content: "Loading...";
+  text-align: center;
+  line-height: 155px;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 55px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #eee;
+  z-index: 1000;
+}
+.btn-add {
+  margin-bottom: 50px;
+}
+.form-post {
+  position: absolute;
+  width: 100%;
+  max-width: 1400px;
+  max-height: 800px;
+  top: -200%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #fff;
+  margin-top: 5px;
+  color: #000;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 9;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 1500ms ease-in-out, top 1500ms ease-in-out,
+    transform 1500ms ease-in-out;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.form-post.active {
+  opacity: 1;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+
+.form-post__content {
+  width: 100%;
+  margin: auto;
+  /* padding-left: 100px; */
+}
+
+.form-post__title {
+  font-size: 35px;
+  font-weight: bolder;
+  text-align: center;
+  height: 80px;
+  padding-top: 20px;
+  text-transform: none;
+}
+
+.form-post__field {
+  margin-top: 20px;
+}
+
+/* .new-order-field {
+  
+} */
+
+.form-post__field input,
+.form-post__content-title input {
+  min-width: 250px;
+  width: 90%;
+  height: 38px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.form-post__content-title button {
+  /* width: 140px; */
+  height: 40px;
+  /* color: white; */
+  background-color: #0984e3;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-left: 30px;
+}
+
+.form-post__content-title button:hover {
+  background-color: #399eeb;
+}
+
+.form-post__field textarea {
+  min-width: 250px;
+  width: 90%;
+  /* width: 600px; */
+  height: 200px;
+  outline: none;
+  border: 1px solid #bbb;
+}
+
+.form-post__field input[type="file"] {
+  width: 500px;
+  border: none;
+  padding-left: 0;
+}
+
+.form-post__control {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.form-post__control button {
+  width: 140px;
+  height: 40px;
+  /* color: white; */
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-post__control .cancel-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.form-post__control .add-section-btn {
+  background-color: #0984e3;
+  color: #fff;
+}
+
+.form-post__control button:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+.close {
+  position: absolute;
+  right: 0;
+}
+
+.BookLabel {
+  display: block;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #eaeaea;
+  padding: 5px;
+}
+
+
+
+.quantitycontrol {
+  margin-left: 15px;
+}
+
+.addcart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.msg-log {
+  position: absolute;
+  width: 400px;
+  height: 50px;
+  /* padding:30px 40px; */
+  background: rgb(252, 23, 23);
+  border-radius: 5px;
+  box-sizing: border-box;
+  z-index: 99;
+  text-align: center;
+  opacity: 0;
+  top: -200%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 300ms ease-in-out, top 1000ms ease-in-out,
+    transform 1000ms ease-in-out;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  /* border: 2px solid #fff; */
+}
+
+.msg-log.active {
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    margin-top: -20px;
+  }
+}
+
+div.stars {
+  width: 270px;
+  display: inline-block;
+}
+
+input.star {
+  display: none;
+}
+
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #444;
+  transition: all 0.2s;
+}
+
+input.star:checked ~ label.star:before {
+  content: "\f005";
+  color: #fd4;
+  transition: all 0.25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before {
+  color: #f62;
+}
+
+label.star:hover {
+  transform: rotate(-15deg) scale(1.3);
+}
+
+label.star:before {
+  content: "\f006";
+  font-family: FontAwesome;
+}
+
+.cover {
+  display: block;
+}
+
+.card {
+  display: inline-block;
+  max-width: 400px;
+  margin: 10px 20px;
+}
+
+.image {
+  border: 0.5px solid #399eeb;
+  min-width: 16rem;
+  max-width: 16rem;
+  min-height: 200px;
+  max-height: 200px;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+.title {
+  display: flex;
+}
+
+.card-animate {
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+.card-animate:hover {
+  -webkit-transform: translateY(calc(-1.5rem / 5));
+  transform: translateY(calc(-1.5rem / 5));
+  -webkit-box-shadow: 0 5px 10px rgb(30 32 37 / 12%);
+  box-shadow: 0 5px 10px rgb(30 32 37 / 12%);
+}
+.card{
+  box-shadow: 0 1px 2px rgb(56 65 74 / 15%);
+}
+
+.tableadmin{
+  position: absolute;
+}
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
